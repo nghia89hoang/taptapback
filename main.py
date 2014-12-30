@@ -4,7 +4,7 @@ from google.appengine.api import urlfetch
 
 class MainHandler(webapp2.RequestHandler):
   def get(self):
-    url = "http://haivl.com"
+    url = "http://google.com"
     try:
       result = urlfetch.fetch(url)
       if result.status_code == 200:
