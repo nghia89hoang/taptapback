@@ -13,7 +13,7 @@ handlers:
 - url: /tapgame/.*
   script: Controller.tapgame.app  
 #Endpoints handler
-- url: /_ah/api/.*
+- url: /_ah/spi/.*
   script: Endpoints.user_api.app
   
 - url: /.*
