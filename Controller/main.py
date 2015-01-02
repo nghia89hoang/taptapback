@@ -2,7 +2,7 @@ import webapp2
 import urllib2
 from google.appengine.api import urlfetch
 
-from Model.ndbUser import gUser
+from Model.ndbUser import TapUser
 from Controller.users import UserHandler
 from Controller.tapgame import TapGameHandler
 

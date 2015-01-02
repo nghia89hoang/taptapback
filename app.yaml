@@ -12,7 +12,9 @@ handlers:
   script: Controller.users.app
 - url: /tapgame/.*
   script: Controller.tapgame.app  
-  
+#Endpoints handler
+- url: /_ah/api/.*
+  script: Endpoints.user_api.app
   
 - url: /.*
   script: Controller.main.app
@@ -20,3 +22,7 @@ handlers:
 libraries:
 - name:  webapp2
   version: latest
+- name: pycrypto
+  version: latest
+- name: endpoints
+  version: 1.0
