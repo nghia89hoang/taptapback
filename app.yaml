@@ -9,8 +9,11 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 - url: .*
-  script: main.app
-  
+  script: /controller/main.app
+- url: /tapgame/.*
+  script: /controller/tapgame.app
+- url: /users/.*
+  script: /controller/users.app
 libraries:
 - name:  webapp2
   version: "2.5.1"
