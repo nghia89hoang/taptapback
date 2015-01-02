@@ -1,6 +1,6 @@
 import endpoints
 from protorpc import messages
-from protorpc import message_type
+from protorpc import message_types
 from protorpc import remote
 
 from endpoints_proto_datastore.ndb import EndpointsModel
@@ -21,4 +21,4 @@ class UserApi(remote.Service):
     
 app = endpoints.api_server([
     UserApi
-], debug = True)
+])
