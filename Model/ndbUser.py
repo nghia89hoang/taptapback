@@ -5,7 +5,7 @@ from endpoints_proto_datastore.ndb import EndpointsModel
 
 # class TapUser(ndb.Model):
 class TapUser(EndpointsModel):
-  userID = ndb.StringProperty(indexed = True)
-  email = ndb.StringProperty(indexed = False)
+  userID = ndb.StringProperty(indexed = False)
+  email = ndb.StringProperty(indexed = True)
   signupDate = ndb.DateTimeProperty(auto_now_add = True)
 
