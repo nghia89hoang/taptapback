@@ -13,9 +13,9 @@ class UserApi(remote.Service):
   def TapUserList(self, query):
     return query
   
-  @TapUser.method(path='tapuser', http_method='POST', name='tapuser.insert')
+  @TapUser.method(path='tapuser', http_method='POST', name='tapuser.insert', response_message = message_types.StringMessage)
   def TapUserInsert(self, my_model):
-    return TapUser.insert(my_model)    
+    return TapUser.insert(my_model)
     
     
 app = endpoints.api_server([
