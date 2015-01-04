@@ -5,12 +5,12 @@ from protorpc import message_types
 from endpoints_proto_datastore.ndb import EndpointsModel
 
 class TapGameInfo(EndpointsModel):
-  currLevel = ndb.IntegerProperty(indexed = True)
-  highestLevel = ndb.IntegerProperty(indexed = True)
-  # totalGold = ndb.StringProperty(indexed = False)
-  totalRelics = ndb.IntegerProperty()
-  totalPrestiges = ndb.IntegerProperty()
-  
+  currLevel = ndb.IntegerProperty(indexed = True, default = 1)
+  highestLevel = ndb.IntegerProperty(indexed = True, default = 1)
+  # totalGold = ndb.StringProperty(indexed = False, default = 0)
+  totalRelics = ndb.IntegerProperty(default = 0)
+  totalPrestiges = ndb.IntegerProperty(default = 0)
+
   @staticmethod
   def insert(new_tapgameinfo):
     query = TapGameInfo.query(ancestor = new_tapgameinfo.key.parent())
@@ -18,4 +18,6 @@ class TapGameInfo(EndpointsModel):
       new_tapgameinfo.put()
       return True
     return False
-    
+
+#   @staticmethod
+#   def update()
