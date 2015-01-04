@@ -13,7 +13,7 @@ class TapUser(EndpointsModel):
   @staticmethod
   def insert(my_model):
     user_query = TapUser.query(TapUser.email == my_model.email)
-    print user_query.count()
+    # print user_query.count()
     if user_query.count() == 0:
       my_model.put()
       return True

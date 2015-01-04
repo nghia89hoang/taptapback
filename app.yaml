@@ -15,7 +15,10 @@ handlers:
 #Endpoints handler
 - url: /_ah/spi/.*
   script: Endpoints.user_api.app
-  
+# - url: /_ah/spi/tapGameInfoApi/.*
+  # script: Endpoints.tapgameinnfo_api.app
+
+#Default handler
 - url: /.*
   script: Controller.main.app
 
