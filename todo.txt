@@ -1,0 +1,6 @@
+TODO LIST:
+[ ] make userId as key
+[ ] add linked facebook userID/ Google+UserID
+[X] List Gameinfo by highest level asc, desc
+[ ] update Gameinfo (provide userId, Gameinfo)
+[ ] get GameInfo by userID
